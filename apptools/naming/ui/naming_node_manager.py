@@ -45,7 +45,7 @@ class NamingNodeManager(NodeManager):
         try:
             hash_value = hash(obj)
 
-        except:
+        except BaseException as e:
             hash_value = id(obj)
 
         return hash_value
